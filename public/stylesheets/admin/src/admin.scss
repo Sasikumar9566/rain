@@ -1,0 +1,38 @@
+
+
+.border-ccc {
+    border-color: #ccc !important;
+}
+
+.table thead th, .table-bordered td, .table-bordered th{
+    border-color: #ccc !important;
+}
+
+.text-color1{
+    color: rgb(226, 77, 17) !important;
+}
+
+nav .small{
+    font-size: 90% !important; 
+}
+nav.side-navbar{    
+    //overflow-y: auto;
+    a {
+        font-size: 16px;
+    }
+
+    .shrink span {
+        font-size: 14px;
+    }
+
+    .arrow {
+        float: right;
+    }
+
+    .border {
+        border-color: rgb(201, 166, 120) !important
+    }
+}
+
+
+

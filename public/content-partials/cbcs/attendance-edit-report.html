@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-sm-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page"><a href="/admin" class="">Home</a></li>
+                <li class="breadcrumb-item active">Attendance Edit Approval </li>
+            </ol>
+        </nav> 
+    </div>  
+    <div class="col-sm-12">
+        <a href="" class="btn btn-primary float-right">View Enabled List</a>
+    </div>
+    <div class="col-sm-12">        
+        <div class="row">            
+            <div class="col-sm-6 form-group">
+                <label for="courseDepartment"><strong>Department</strong></label>
+                <select name="" id="courseDepartment" class="form-control">
+                    <option value="">Automobile Engineering</option>
+                    <option value="">Engineering</option>
+                </select>
+            </div>
+            <div class="col-sm-6 form-group">
+                <label for="yearText"><strong>Program</strong></label>
+                <select name="" id="" class="form-control">
+                    <option value="">B.tech</option>
+                    <option value="">Second</option>
+                </select>
+            </div>
+            
+        </div>
+    </div>  
+    <div class="col-sm-12">
+        <table class="table table-bordered ">
+                <thead>                    
+                    <tr>  
+                    <th><input type="checkbox" class="form-control" name="" id=""></th>                  
+                    <th >S.No.</th>
+                    <th >Faculty Name</th>
+                    <th >From Date</th>
+                    <th >To Date</th>
+                    <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in digits | limitTo:filterModel ">
+                    <th scope="row">
+                        <input type="checkbox" name="" checked class="form-control" id="">
+                    </th>
+                    
+                    </tr>                    
+                </tbody>
+        </table> 
+    </div>    
+</div>

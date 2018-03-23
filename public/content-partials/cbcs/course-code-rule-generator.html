@@ -1,0 +1,179 @@
+<div class="row tab-content" ng-controller="digitCtrl">
+    <div class="col-sm-12 tab-pane show active" id="codeRule">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page"><a href="/admin" class="">Home</a></li>
+                <li class="breadcrumb-item active">Course Code Rule Generator</li>
+            </ol>
+        </nav> 
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="row">
+                <div class="col-sm-4">
+                <label for="digitsSelection">Total No. of Digits</label>
+                <select name="digits" id="digitsSelection" ng-model="filterModel" class="form-control" style="width:80px" >
+                    <option ng-repeat="d in digits">{{d.digit}}</option>
+                </select>
+            </div>
+            <div class="col-sm-7">
+                <label for="look">Code Looks Like</label>
+                <input type="text" class="form-control" name="" id="" disabled ng-value="print(filterModel)">
+            </div>
+            </div>
+        </div>  
+        </div>   
+        <div class="row mt-4">
+          <div class="col-sm-12 table-responsive">
+             <table class="table table-bordered">
+                <thead class="border border-info">
+                    <tr class="border border-info">
+                    <th scope="col">Combine with previous Digits</th>
+                    <th scope="col">Digits #</th>
+                    <th scope="col">Digit Type</th>
+                    <th scope="col">Enter Restricted List (For Combined Digits)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in digits | limitTo:filterModel ">
+                    <th scope="row">
+                        <input type="checkbox" name="" checked class="form-control" id="">
+                    </th>
+                    <td>Digit- <span ng-bind="d.digit"></span></td>
+                    <td>
+                        <select name="" id="" class="form-control" ng-model="digitType" >
+                         <option value="0-9">NUMERIC</option>
+                         <option value="A-Z">ALPHA-NUMERIC</option>
+                        </select>
+                    </td>
+                    <td>                        
+                        <input type="text" name="" id="" class="form-control" disabled ng-value="digitType" >
+                    </td>
+                    </tr>                    
+                </tbody>
+            </table> 
+            
+          </div>  
+        </div>    
+    </div>    
+    <div class="col-sm-12 tab-pane fade" id="department">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb nav">
+                <li class="breadcrumb-item" aria-current="page"><a href="/admin" class="">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="/#codeRule" data-target="#codeRule" data-toggle="tab" class="">Course Code Rule Generator</a></li>
+                <li class="breadcrumb-item active">Department Configuration</li>
+            </ol>
+        </nav> 
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="row">
+                <div class="col-sm-4">
+                <label for="digitsSelection">Total No. of Digits</label>
+                <select name="digits" id="digitsSelection"  class="form-control" style="width:80px" ng-model="dfilterModel">                    
+                    <option ng-repeat="d in digits">{{d.digit}}</option>
+                </select>
+            </div>
+            <div class="col-sm-7">
+                <label for="look">Code Looks Like</label>
+                <input type="text" class="form-control" name="" id="" disabled ng-value="print(dfilterModel)">
+            </div>
+            </div>
+        </div>  
+        </div>   
+        <div class="row mt-4">
+          <div class="col-sm-12 table-responsive">
+             <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                    <th scope="col">Combine with previous Digits</th>
+                    <th scope="col">Digits #</th>
+                    <th scope="col">Digit Type</th>
+                    <th scope="col">Enter Restricted List (For Combined Digits)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in digits | limitTo:dfilterModel ">
+                    <th scope="row">
+                        <input type="checkbox" name="" checked class="form-control" id="">
+                    </th>
+                    <td>Digit- <span ng-bind="d.digit"></span></td>
+                    <td>
+                        <select name="" id="" class="form-control" ng-model="ddigitType" >
+                         <option value="0-9">NUMERIC</option>
+                         <option value="A-Z">ALPHA-NUMERIC</option>
+                        </select>
+                    </td>
+                    <td>                        
+                        <input type="text" name="" id="" class="form-control" ng-value="ddigitType" >
+                    </td>
+                    </tr>                    
+                </tbody>
+            </table> 
+            
+          </div>  
+        </div>    
+    </div>
+    <div class="col-sm-12 tab-pane fade" id="category">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb nav">
+                <li class="breadcrumb-item" aria-current="page"><a href="/admin" class="">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="/#codeRule" data-target="#codeRule" data-toggle="tab" class="">Course Code Rule Generator</a></li>
+                <li class="breadcrumb-item active">Category Configuration</li>
+            </ol>
+        </nav> 
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="row">
+                <div class="col-sm-4">
+                <label for="digitsSelection">Total No. of Digits</label>
+                <select name="digits" id="digitsSelection"  class="form-control" style="width:80px" ng-model="cfilterModel">                    
+                    <option ng-repeat="d in digits">{{d.digit}}</option>
+                </select>
+            </div>
+            <div class="col-sm-7">
+                <label for="look">Code Looks Like</label>
+                <input type="text" class="form-control" name="" id="" disabled ng-value="print(cfilterModel)">
+            </div>
+            </div>
+        </div>  
+        </div>   
+        <div class="row mt-4">
+          <div class="col-sm-12 table-responsive">
+             <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                    <th scope="col">Combine with previous Digits</th>
+                    <th scope="col">Digits #</th>
+                    <th scope="col">Digit Type</th>
+                    <th scope="col">Enter Restricted List (For Combined Digits)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in digits | limitTo:cfilterModel ">
+                    <th scope="row">
+                        <input type="checkbox" name="" checked class="form-control" id="">
+                    </th>
+                    <td>Digit- <span ng-bind="d.digit"></span></td>
+                    <td>
+                        <select name="" id="" class="form-control" ng-model="cdigitType" >
+                         <option value="0-9">NUMERIC</option>
+                         <option value="A-Z">ALPHA-NUMERIC</option>
+                        </select>
+                    </td>
+                    <td>                        
+                        <input type="text" name="" id="" class="form-control" ng-value="cdigitType" >
+                    </td>
+                    </tr>                    
+                </tbody>
+            </table> 
+            
+          </div>  
+        </div>    
+    </div> 
+</div>
+<div class="row">
+    <div class="col-sm-6 ml-auto text-sm-right nav">
+        <a href="/#department" data-target="#department" class="btn btn-warning mr-3" data-toggle="tab">Department Configuration</a>
+        <a href="/#category" data-target="#category" class="btn btn-warning mr-3" data-toggle="tab">Category Configuration</a>
+        <a href="" class="btn btn-warning mr-3">Save</a>
+    </div>
+</div>

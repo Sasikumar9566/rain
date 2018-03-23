@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-sm-12" ng-controller="vmCtrl">        
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+            </nav>
+            <div class="card">
+                <div class="card-header font-weight-bold">
+                    Institute Vision & Mission
+                </div>
+                <div class="card-body">
+                    <form ng-submit="submit(vandm.$valid)" name="vandm" novalidate>
+                        <h2 class="text-success" ng-show="success==true">Updated</h2>
+                        <div class="form-group">
+                            <label for="vision"><strong>Vision</strong></label>
+                            <textarea rows="" id="vision" cols="" class="form-control" ng-model="infoData.vision" name="vision" ng-bind="vAndm[0].vision" disabled></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="mission"><strong>Mission</strong></label>
+                            <textarea class="form-control" id="mission" ng-model="infoData.mission" name="mission" ng-bind="vAndm[0].mission" disabled></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary float-right" ng-hide="secondary==true" ng-model="secondary" onclick="$('.card-body textarea').removeAttr('disabled')" ng-click="secondary=true">Update Vision & Mission</button>
+                        <button type="reset" class="btn btn-warning float-right" ng-show="secondary==true" ng-model="primary" ng-disabled="vandm.$invalid" ng-click="updateVM()" >Update Vision & Mission</button>
+                    </form>
+                </div>
+            </div>        
+    </div>
+</div>

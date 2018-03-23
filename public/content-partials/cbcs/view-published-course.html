@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="col-sm-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page"><a href="/admin" class="">Home</a></li>
+                <li class="breadcrumb-item active">Published Course</li>
+            </ol>
+        </nav> 
+    </div>  
+    <div class="col-sm-12">        
+        <div class="row">
+            <div class="col-sm-2 form-group">
+                <label for="year"><strong>Publishing Semester</strong></label>
+                <select name="" id="year" class="form-control">
+                    <option value="">2017 - odd</option>
+                    <option value="">2017 - even</option>
+                </select>
+            </div>
+            <div class="col-sm-2 form-group">
+                <label for="yearText"><strong>Year</strong></label>
+                <select name="" id="yearText" class="form-control">
+                    <option value="">First</option>
+                    <option value="">Second</option>
+                </select>
+            </div>
+            <div class="col-sm-3 form-group">
+                <label for="courseDepartment"><strong>Department</strong></label>
+                <select name="" id="courseDepartment" class="form-control">
+                    <option value="">Automobile Engineering</option>
+                    <option value="">Engineering</option>
+                </select>
+            </div>
+            <div class="col-sm-3 form-group">
+                <label for="yearText"><strong>Program</strong></label>
+                <select name="" id="" class="form-control">
+                    <option value="">B.tech</option>
+                    <option value="">Second</option>
+                </select>
+            </div>
+            
+        </div>
+    </div>  
+    <div class="col-sm-12">
+        <table class="table table-bordered ">
+                <thead>
+                    <tr>                    
+                    <th colspan="5"></th>                    
+                    <th colspan="3" class="text-center">Hours</th>
+                    <th colspan="3"></th>                    
+                    </tr>
+                    <tr>                    
+                    <th >S.No.</th>
+                    <th >Category</th>
+                    <th >Course Name</th>
+                    <th >Credit</th>                    
+                    <th>Instructor</th>
+                    <th>L</th>
+                    <th>T</th>
+                    <th>P</th>
+                    <th>Lecture Hall</th>
+                    <th>Description</th>
+                    <th>Info</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in digits | limitTo:filterModel ">
+                    <th scope="row">
+                        <input type="checkbox" name="" checked class="form-control" id="">
+                    </th>
+                    
+                    </tr>                    
+                </tbody>
+        </table> 
+    </div>    
+</div>

@@ -1,0 +1,143 @@
+<div class="row">
+    <div class="col-sm-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page"><a href="/admin" class="">Home</a></li>
+                <li class="breadcrumb-item active">Control Panel</li>
+            </ol>
+        </nav> 
+    </div>
+    <div class="col-sm-12">
+        <div class="row mt-2 pb-2">
+            <div class="col-sm-12">
+                <h6 class="d-inline text-color1 font-weight-bold my-3">Registration Period</h6>
+                <a href="" class="btn btn-primary float-right">Save</a>
+            </div>
+        </div>
+        <div class="row py-2 border border-ccc border-bottom-0">
+            <div class="col-sm-3">
+                <p class="">Registration From Date</p>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" ng-model="fromDate" datetime-picker date-format="dd-MM-yyyy HH:mm:ss" name="" id="" class="form-control" placeholder="From Date">
+            </div>
+        </div>
+        <div class="row border border-ccc py-2">
+            <div class="col-sm-3">
+                <p>Registration End Date</p>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" ng-model="endDate" datetime-picker date-format="dd-MM-yyyy HH:mm:ss" name="" id="" class="form-control" placeholder="End Date">
+            </div>
+        </div>
+
+    </div>
+    <div class="col-sm-12">
+        <div class="row mt-4 pb-2">
+            <div class="col-sm-12">
+                <h6 class="d-inline text-color1 font-weight-bold my-3">Credit Condition Per Semester</h6>
+                <a href="" class="btn btn-primary float-right">Save</a>
+            </div>
+        </div>
+        <div class="row py-2 border border-ccc border-bottom-0">
+            <div class="col-sm-3">
+                <p>Minimum Credit per Semester</p>
+            </div>
+            <div class="col-sm-1">
+                <input type="number" name="" id="" class="form-control">
+            </div>
+        </div>
+        <div class="row py-2 border border-ccc border-bottom-0">
+            <div class="col-sm-3">
+                <p>Suffice Credit Per Semester</p>
+            </div>
+            <div class="col-sm-1">
+                <input type="number" name="" id="" class="form-control">
+            </div>
+        </div>
+        <div class="row border border-ccc py-2">
+            <div class="col-sm-3">
+                <p>Min Foundation + Core Per Semester</p>
+            </div>
+            <div class="col-sm-1">
+                <input type="number" name="" id="" class="form-control">
+            </div>
+        </div>
+    
+    </div>
+    <div class="col-sm-12 mt-3">
+        <div class="row mt-4 pb-2">
+            <div class="col-sm-12">
+                <h6 class="d-inline text-color1 font-weight-bold my-3">Credit Category Table Rules</h6>
+                <div class="d-inline float-right">
+                    <a href="" class="btn btn-primary">Save</a>
+                    <a href="" class="btn btn-primary">Delete</a>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive text-center">
+          <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                    <th scope="col"><input type="checkbox" class="form-control" name="" id=""></th>
+                    <th scope="col">S.No.</th>
+                    <th scope="col">Category Name</th>
+                    <th scope="col">Maximum Credit</th>
+                    <th scope="col">Suffice Credit</th>                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in digits | limitTo:filterModel ">
+                    <th scope="row">
+                        <input type="checkbox" name="" checked class="form-control" id="">
+                    </th>
+                    
+                    </tr>                    
+                    <tr>
+                        <th colspan="6" class="text-center font-weight-bold"><a href="" class="btn btn-primary">Add New Category</a></th>                
+                    </tr>            
+                </tbody>
+            </table>               
+        </div>
+    </div>
+    <div class="col-sm-12 mt-4">
+        <div class="row pb-2">
+            <div class="col-sm-12">
+                <h6 class="d-inline text-color1 font-weight-bold my-3">Grade Table Rules</h6>
+                <div class="d-inline float-right">
+                    <a href="" class="btn btn-primary">Save</a>
+                    <a href="" class="btn btn-primary">Delete</a>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive text-center">
+          <table class="table table-bordered">                            
+                <thead>                    
+                    <tr>                        
+                        <th colspan="3" class="text-left font-weight-bold">Absents Grade Letter is AB & Mark is 0</th>
+                        <th colspan="3"></th>
+                    </tr>
+                    <tr>
+                    <th scope="col"><input type="checkbox" class="form-control" name="" id=""></th>
+                    <th scope="col">S.No.</th>
+                    <th scope="col">Min</th>
+                    <th scope="col">Max</th>
+                    <th scope="col">Grade Letter</th>                    
+                    <th scope="col">Grade Point</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in digits | limitTo:filterModel ">
+                        <th scope="row">
+                            <input type="checkbox" name="" checked class="form-control" id="">
+                        </th>
+                    </tr>    
+                    <tr>
+                        <th colspan="6" class="text-center font-weight-bold"><a href="" class="btn btn-primary">Add New Grade</a></th>                
+                    </tr>               
+                </tbody>                            
+            </table>                           
+        </div>
+    </div>
+    
+</div>

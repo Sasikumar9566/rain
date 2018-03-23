@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="rain">
+  <head>
+    <%- include partials/admin-header.ejs %>
+  </head>
+  <body>
+    <%- include partials/admin-nav.ejs %>
+    <div class="page home-page">
+      <!-- navbar-->
+      <header class="header" style="position:fixed;z-index:999;top: 0;width:100%;">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header" style="position:relative;z-index:99" ><a id="toggle-btn" href="#" class="menu-btn"><i class="fa fa-bars"></i></a><a href="#" class="navbar-brand"></a></div>
+              <ul class="nav-menu list-unstyled float-right" style="position:absolute;z-index:9;width:82%">
+                <!-- <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a></li>
+                <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope"></i><span class="badge badge-info">10</span></a></li> -->               
+                <li class="nav-item float-right"><a href="/15987/logout" class="nav-link logout">Logout<i class="fas fa-sign-out-alt"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Counts Section -->
+      
+    <div class="col-sm-12 px-5 mt-5 pt-5 mx-auto">
+      <div class="" ng-view></div>
+    </div>
+    
+      <footer class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>RAIN &copy; 2017-2019</p>
+            </div>
+            <div class="col-sm-6 text-right">
+              <p><a href="https://zebros.in" title="Designed By Zebros" class="external">&nbsp;</a></p>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <%- include partials/admin-footer.ejs %>
+    
+  </body>
+</html>
